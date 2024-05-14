@@ -25,7 +25,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/dist/grc/browser /usr/share/nginx/html
 
 # Copy the Nginx configuration file into the image
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Inform Docker that the container listens on port 80 at runtime
 EXPOSE 80
